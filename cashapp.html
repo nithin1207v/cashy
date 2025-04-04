@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cashy App Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background: #000000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            color: #ffffff;
+        }
+
+        .cashapp-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cashapp-logo {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            color: #00D54B; /* Cash App green */
+        }
+
+        .login-container {
+            max-width: 700px;
+            margin: 0 auto;
+            width: 150%;
+            background: #1a1a1a; /* Light black container */
+            padding: 70px;
+            border-radius: 8px;
+        }
+
+        .country-selector {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        select {
+            padding: 12px;
+            background: #262626;
+            border: 1px solid #333333;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            background: #262626;
+            border: 1px solid #333333;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        input::placeholder {
+            color: #808080;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .primary-btn {
+            background: #00D54B;
+            color: #000000;
+            padding: 16px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .secondary-btn {
+            background: #1a1a1a;
+            color: #ffffff;
+            padding: 16px;
+            border: 1px solid #404040;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .create-account {
+            text-align: center;
+            margin: 20px 0;
+            color: #808080;
+        }
+
+        .create-account a {
+            color: #00D54B;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="cashapp-header">
+        <div class="cashapp-logo">Cashy App</div>
+    </div>
+
+    <div class="login-container">
+        <div class="create-account">
+            <p>Enter your phone number or email. New to Cashy App? <a href="#">Create account</a></p>
+        </div>
+
+        <div class="country-selector">
+            <select>
+                <option>US (+1)</option>
+                <option>UK (+44)</option>
+            </select>
+        </div>
+
+        <input type="text" placeholder="Mobile number" pattern="[0-9]*">
+        
+        <div class="button-group">
+            <button class="secondary-btn">Use email</button>
+            <button class="primary-btn">Continue</button>
+        </div>
+    </div>
+</body>
+</html>
